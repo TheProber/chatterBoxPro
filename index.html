@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	function createRoom(){
+		var admin=document.getElementById("admin").value;
+		var pass=document.getElementById("pass").value;
+    if(pass==""||admin=="")
+      alert("Enter Id or password correctly");
+    else
+		window.location.href= "first.html?admin="+admin+"&pass="+pass;
+
+	}
+
+		function joinRoom(){
+			var join=document.getElementById("join").value;
+      if(join==""){
+        alert("enter id correctly")
+      }
+      else{
+        
+			window.location.href= "first.html?join="+join;
+}
+		}
+
+	</script>
+</head>
+<body>
+Join <input id="join" type="text" name=""><button onclick="joinRoom()">join</button><br> 
+<input type="text" id="admin" name="" placeholder="ID"><br>
+<input type="password" name="" id="pass" placeholder="password"><br>
+<button onclick="createRoom()">create</button>
+
+</body>
+</html>
